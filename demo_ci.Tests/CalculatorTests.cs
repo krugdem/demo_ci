@@ -14,5 +14,17 @@ namespace demo_ci.Tests
                 () => calc.Add(inputFirst, inputSecond)
             );
         }
+
+        [Theory]
+        [InlineData(1, 1, 2)]
+        [InlineData(3, 1, 4)]
+        [InlineData(3, 54, 57)]
+        [InlineData(1, 6, 7)]
+        public void InputTwoPositiveNumber_ReturnSumm(int first, int second, int result)
+        {
+            var calc = new Calculator();
+            Assert.Equal(result, calc.Add(first, second));
+        }
+
     }
 }
