@@ -19,7 +19,7 @@ namespace demo_ci.Tests
         [InlineData(1, 1, 2)]
         [InlineData(3, 1, 4)]
         [InlineData(3, 54, 57)]
-        [InlineData(1, 6, 7)]
+        [InlineData(1, 0, 7)]
         public void InputTwoPositiveNumber_ReturnSumm(int first, int second, int result)
         {
             var calc = new Calculator();
